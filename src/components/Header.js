@@ -5,12 +5,13 @@ import Link from '@material-ui/core/Link';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
+
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
+    borderBottom: `1px solid ${theme.palette.divider}`
   },
   toolbar: {
-    flexWrap: 'wrap',
+    flexWrap: 'wrap'
   },
   toolbarTitle: {
     flexGrow: 1,
@@ -18,26 +19,29 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     margin: theme.spacing(1, 1.5),
-  },
+    cursor: "pointer"
+  }
 }));
 
-function Header(){
+
+function Header(props){
   const classes = useStyles();
+
   return(
     <React.Fragment>
-      <AppBar className={classes.appBar} elevation={0} position="static" color="default">
+      <AppBar className={classes.appBar} elevation={0} color="default" position="sticky">
         <Toolbar className={classes.toolbar}>
           <Typography className={classes.toolbarTitle} variant="h6" color="inherit" noWrap>
             Pedro Perpétua
           </Typography>
           <nav>
-            <Link className={classes.link} variant="button" color="textPrimary" href="#about-me">
+            <Link className={classes.link} variant="button" color="textPrimary" onClick={props.scrollAboutMe}>
               About me
             </Link>
-            <Link className={classes.link} variant="button" color="textPrimary" href="#projects">
+            <Link className={classes.link} variant="button" color="textPrimary" onClick={props.scrollProjects}>
               Projects
             </Link>
-            <Link className={classes.link} variant="button" color="textPrimary" href="#contacts">
+            <Link className={classes.link} variant="button" color="textPrimary" onClick={props.scrollContacts}>
               Contacts
             </Link>
           </nav>
