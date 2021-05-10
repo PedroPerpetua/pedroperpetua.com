@@ -1,8 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid'
+import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
+
+import TooltippedSocialIcon from './TooltippedSocialIcon';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -23,7 +27,7 @@ function AboutMe(props){
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Grid justify="center" align="center" ref={props.scrollRef}>
+      <Grid container justify="center" align="center" ref={props.scrollRef}>
         <div>
           <Avatar
             className={classes.avatar}
@@ -42,6 +46,18 @@ function AboutMe(props){
             I seek to work as a full-stack developer.
           </Typography>
         </div>
+      </Grid>
+      <Grid container justify="center" align="center">
+        <TooltippedSocialIcon
+          icon={GitHubIcon}
+          text="GitHub"
+          link="https://github.com/PedroPerpetua"
+        />
+        <TooltippedSocialIcon
+          icon={LinkedInIcon}
+          text="LinkedIn"
+          link="https://www.linkedin.com/in/pedro-perp%C3%A9tua-29a7b6211/"
+        />
       </Grid>
     </React.Fragment>
   );
