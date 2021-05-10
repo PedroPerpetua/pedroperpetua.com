@@ -3,10 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
+import PFP from './../pfp.jpg';
 
 import TooltippedSocialIcon from './TooltippedSocialIcon';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +35,7 @@ function AboutMe(props){
           <Avatar
             className={classes.avatar}
             alt=""
-            src="/static/images/1.jpg"
+            src={PFP}
           />
           <Typography variant="h5" color="inherit" noWrap>
             Student and Developer
@@ -57,6 +60,16 @@ function AboutMe(props){
           icon={LinkedInIcon}
           text="LinkedIn"
           link="https://www.linkedin.com/in/pedro-perp%C3%A9tua-29a7b6211/"
+        />
+        <TooltippedSocialIcon
+          icon={TwitterIcon}
+          text="Twitter"
+          link="https://twitter.com/Pedro_WarriorPP"
+        />
+        <TooltippedSocialIcon
+          icon={InstagramIcon}
+          text="Instagram"
+          link="https://www.instagram.com/perpetuapedro/"
         />
       </Grid>
     </React.Fragment>
