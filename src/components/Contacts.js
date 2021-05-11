@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   base: {
-    backgroundColor: "white",
+    backgroundColor: "WhiteSmoke",
     padding: 50,
     marginTop: 100,
     marginBottom: 100
