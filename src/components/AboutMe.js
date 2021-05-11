@@ -1,9 +1,10 @@
-import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import PFP from './../pfp.jpg';
+import PFPAvatar from './../pfp_avatar.png';
 
 import TooltippedSocialIcon from './TooltippedSocialIcon';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -16,10 +17,10 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     width: theme.spacing(20),
     height: theme.spacing(20),
-    margin: 20
+    marginTop: 20,
+    backgroundColor: 'rgb(2, 0, 44)'
   },
   textBox: {
-    maxWidth: "45%",
     textAlign: "justify",
     textAlignLast: "center"
   }
@@ -29,18 +30,33 @@ const useStyles = makeStyles((theme) => ({
 function AboutMe(props){
   const classes = useStyles();
   return (
-    <React.Fragment>
-      <Grid container justify="center" align="center" ref={props.scrollRef}>
-        <div>
+    <Container maxWidth="sm">
+      <Grid
+        container
+        justify="center"
+        align="center"
+        spacing={2}
+        ref={props.scrollRef}
+      >
+        <Grid item>
           <Avatar
             className={classes.avatar}
             alt=""
             src={PFP}
           />
-          <Typography variant="h5" color="inherit" noWrap>
+        </Grid>
+        <Grid item>
+          <Avatar
+            className={classes.avatar}
+            alt=""
+            src={PFPAvatar}
+          />
+        </Grid>
+        <Grid item>
+          <Typography variant="h5" color="inherit">
             Student and Developer
           </Typography>
-          <Typography variant="h2" color="inherit" noWrap>
+          <Typography variant="h2" color="inherit">
             Pedro Perpétua
           </Typography>
           <Typography className={classes.textBox} variant="h6" color="inherit">
@@ -48,31 +64,29 @@ function AboutMe(props){
             I love to program and explore GameDev as a hobby.
             I seek to work as a full-stack developer.
           </Typography>
-        </div>
+          <TooltippedSocialIcon
+            icon={GitHubIcon}
+            text="GitHub"
+            link="https://github.com/PedroPerpetua"
+          />
+          <TooltippedSocialIcon
+            icon={LinkedInIcon}
+            text="LinkedIn"
+            link="https://www.linkedin.com/in/pedro-perp%C3%A9tua-29a7b6211/"
+          />
+          <TooltippedSocialIcon
+            icon={TwitterIcon}
+            text="Twitter"
+            link="https://twitter.com/Pedro_WarriorPP"
+          />
+          <TooltippedSocialIcon
+            icon={InstagramIcon}
+            text="Instagram"
+            link="https://www.instagram.com/perpetuapedro/"
+          />
+        </Grid>
       </Grid>
-      <Grid container justify="center" align="center">
-        <TooltippedSocialIcon
-          icon={GitHubIcon}
-          text="GitHub"
-          link="https://github.com/PedroPerpetua"
-        />
-        <TooltippedSocialIcon
-          icon={LinkedInIcon}
-          text="LinkedIn"
-          link="https://www.linkedin.com/in/pedro-perp%C3%A9tua-29a7b6211/"
-        />
-        <TooltippedSocialIcon
-          icon={TwitterIcon}
-          text="Twitter"
-          link="https://twitter.com/Pedro_WarriorPP"
-        />
-        <TooltippedSocialIcon
-          icon={InstagramIcon}
-          text="Instagram"
-          link="https://www.instagram.com/perpetuapedro/"
-        />
-      </Grid>
-    </React.Fragment>
+    </Container>
   );
 }
 
