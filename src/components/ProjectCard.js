@@ -54,6 +54,11 @@ function ProjectCard(props){
       >
         {props.title}
       </Typography>
+      {props.subtitle &&
+      <Typography variant="subtitle1" style={{textAlign: isLargeDevice ? props.side:"center"}}>
+        <i>{props.subtitle}</i>
+      </Typography>
+      }
       <Grid container>
         {left}
         {right}

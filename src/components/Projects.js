@@ -2,6 +2,12 @@ import React from 'react';
 import { makeStyles, withWidth } from '@material-ui/core/';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+
+import ProjectCard from './ProjectCard';
+import PedroPerpetua from './../assets/pedroperpetua.jpg';
+import PapelMagico from './../assets/papelmagico.jpg'
+import ProjetosUtil from './../assets/projetosutil.jpg'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -26,6 +32,46 @@ function Projects(props){
     <React.Fragment>
       <Typography className={classes.title} variant="h2">Projects</Typography>
 
+      <ProjectCard
+        title="pedroperpetua.com"
+        image={PedroPerpetua}
+        side="left"
+      >
+        I developed this website using React, integrating Material-UI, served trough Github-Pages. It features a responsive design,
+        working well both on large, medium and small devices.<br/>
+        Even though it is mostly/totally static, I have knowledge about what is and how to use State and Hooks.
+      </ProjectCard>
+
+      <ProjectCard
+        title="papelmagico.eu"
+        image={PapelMagico}
+        side="right"
+      >
+        <Link href="https://papelmagico.eu" target="_blank" rel="noopener noreferrer">papelmagico.eu</Link> is a simple website that serves
+        as a hub to multiple platforms. Developed in simple HTML, CSS and JavaScript, it features a responsive design in all devices.
+      </ProjectCard>
+
+      <ProjectCard
+        title="ProjetosUtil"
+        subtitle="Currently only available in Portuguese"
+        image={ProjetosUtil}
+        side="left"
+      >
+        ProjetosUtil is a tool specially designed for Civil Engineers to automate all the "office paperwork" regarding their projects. It
+        features a local Python Backend and an Electron Frontend that communicate with each other. It also features a small webserver that makes
+        use of Flask to manage version updating, bug reporting, and user requests. It is also packaged with pyinstaller and destributed using
+        Inno Setup.<br/><br/>
+
+        Notable libraries/frameworks used:<br/>
+        <ul>
+          <li>PythonEel</li>
+          <li>Python Requests</li>
+          <li>Docxtpl and Docxcompose</li>
+          <li>Pyinstaller</li>
+          <li>Flask</li>
+          <li>MaterializeCSS (on Electron)</li>
+        </ul>
+      </ProjectCard>
 
     </React.Fragment>
   );
