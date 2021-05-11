@@ -16,7 +16,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 const useStyles = makeStyles((theme) => ({
   container: {
     marginTop: 100,
-    marginBottom: 100,
+    marginBottom: 105,
     color: "white"
   },
   avatar: {

@@ -10,26 +10,24 @@ import Background from './assets/background.jpg';
 
 
 function App() {
-  const HeaderOffset = 65; // Hardcoded value
-
   const aboutMeRef = React.createRef();
   const scrollToAboutMe = (() =>{
     window.scrollTo({
-      top: aboutMeRef.current.offsetTop - HeaderOffset
+      top: aboutMeRef.current.offsetTop
     });
   });
 
   const projectsRef = React.createRef();
   const scrollToProjects = (() =>{
     window.scrollTo({
-      top: projectsRef.current.offsetTop - HeaderOffset
+      top: projectsRef.current.offsetTop
     });
   });
 
   const contactsRef = React.createRef();
   const scrollToContacts = (() =>{
     window.scrollTo({
-      top: contactsRef.current.offsetTop - HeaderOffset
+      top: contactsRef.current.offsetTop
     });
   });
 

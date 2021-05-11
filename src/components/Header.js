@@ -41,12 +41,12 @@ function Header(props){
             <Link className={classes.link} variant="button" color="textPrimary" onClick={props.scrollAboutMe}>
               About me
             </Link>
-            {/* <Link className={classes.link} variant="button" color="textPrimary" onClick={props.scrollProjects}>
+            <Link className={classes.link} variant="button" color="textPrimary" onClick={props.scrollProjects}>
               Projects
             </Link>
             <Link className={classes.link} variant="button" color="textPrimary" onClick={props.scrollContacts}>
               Contacts
-            </Link> */}
+            </Link>
           </nav>
         </Toolbar>
       </AppBar>
