@@ -3,8 +3,8 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
-import PFP from './../pfp.jpg';
-import PFPAvatar from './../pfp_avatar.png';
+//import PFP from './../assets/pfp.jpg';
+import PFPAvatar from './../assets/pfp_avatar.png';
 
 import TooltippedSocialIcon from './TooltippedSocialIcon';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -14,11 +14,16 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    marginTop: 100,
+    marginBottom: 100,
+    color: "white"
+  },
   avatar: {
     width: theme.spacing(20),
     height: theme.spacing(20),
     marginTop: 20,
-    backgroundColor: 'rgb(2, 0, 44)'
+    backgroundColor: "#222222"
   },
   textBox: {
     textAlign: "justify",
@@ -30,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 function AboutMe(props){
   const classes = useStyles();
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="sm" className={classes.container}>
       <Grid
         container
         justify="center"
@@ -38,18 +43,23 @@ function AboutMe(props){
         spacing={2}
         ref={props.scrollRef}
       >
-        <Grid item>
-          <Avatar
-            className={classes.avatar}
-            alt=""
-            src={PFP}
-          />
-        </Grid>
+        {
+          // IRL picture
+          /* <Grid item>
+            <Avatar
+              className={classes.avatar}
+              alt=""
+              src={PFP}
+              imgProps={ {draggable: false} }
+            />
+          </Grid> */
+        }
         <Grid item>
           <Avatar
             className={classes.avatar}
             alt=""
             src={PFPAvatar}
+            imgProps={ {draggable: false} }
           />
         </Grid>
         <Grid item>

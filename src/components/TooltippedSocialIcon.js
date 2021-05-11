@@ -4,6 +4,9 @@ import IconButton from '@material-ui/core/IconButton'
 
 
 const useStyles = makeStyles((theme) => ({
+  icon: {
+    color: "white"
+  },
   tooltip: {
     fontSize: 16
   }
@@ -23,7 +26,7 @@ function TooltippedSocialIcon(props){
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon fontSize="large"/>
+        <Icon className={classes.icon} fontSize="large"/>
       </IconButton>
     </Tooltip>
   );

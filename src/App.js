@@ -1,10 +1,13 @@
 import React from 'react'
 import '@fontsource/roboto';
 import './App.css';
+import {Parallax} from 'react-parallax';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contacts from './components/Contacts';
+import Background from './assets/background.jpg';
+
 
 function App() {
   const HeaderOffset = 65; // Hardcoded value
@@ -37,9 +40,11 @@ function App() {
         scrollProjects={scrollToProjects}
         scrollContacts={scrollToContacts}
       />
-      <AboutMe scrollRef={aboutMeRef}/>
-      <Projects scrollRef={projectsRef}/>
-      <Contacts scrollRef={contactsRef}/>
+      <Parallax bgImage={Background} strength={1000}>
+        <AboutMe scrollRef={aboutMeRef}/>
+        <Projects scrollRef={projectsRef}/>
+        <Contacts scrollRef={contactsRef}/>
+      </Parallax>
     </div>
   );
 }

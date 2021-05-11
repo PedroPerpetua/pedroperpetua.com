@@ -8,7 +8,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    borderBottom: `1px solid ${theme.palette.divider}`
+    borderBottom: `1px solid ${theme.palette.divider}`,
+    color: "white",
+    backgroundColor: "#222222"
   },
   toolbar: {
     flexWrap: 'wrap'
@@ -19,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     margin: theme.spacing(1, 1.5),
-    cursor: "pointer"
+    cursor: "pointer",
+    color: "white"
   }
 }));
 
