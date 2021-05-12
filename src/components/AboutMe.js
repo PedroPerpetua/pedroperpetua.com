@@ -3,8 +3,8 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
-//import PFP from './../assets/pfp.jpg';
-import PFPAvatar from './../assets/pfp_avatar.png';
+import PFP from './../assets/pfp.jpg';
+//import PFPAvatar from './../assets/pfp_avatar.png';
 
 import TooltippedSocialIcon from './TooltippedSocialIcon';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -42,25 +42,22 @@ function AboutMe(props){
         spacing={2}
         ref={props.scrollRef}
       >
-        {
-          // IRL picture
-          /* <Grid item>
-            <Avatar
-              className={classes.avatar}
-              alt=""
-              src={PFP}
-              imgProps={ {draggable: false} }
-            />
-          </Grid> */
-        }
         <Grid item>
+          <Avatar
+            className={classes.avatar}
+            alt=""
+            src={PFP}
+            imgProps={ {draggable: false} }
+          />
+        </Grid>
+        {/* <Grid item>
           <Avatar
             className={classes.avatar}
             alt=""
             src={PFPAvatar}
             imgProps={ {draggable: false} }
           />
-        </Grid>
+        </Grid> */}
         <Grid item>
           <Typography variant="h5" color="inherit">
             Student and Developer

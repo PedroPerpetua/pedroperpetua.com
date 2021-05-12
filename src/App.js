@@ -6,7 +6,7 @@ import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contacts from './components/Contacts';
-import Background from './assets/background.jpg';
+import Background from './assets/background.png';
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
         scrollProjects={scrollToProjects}
         scrollContacts={scrollToContacts}
       />
-      <Parallax bgImage={Background} strength={1000}>
+      <Parallax bgImage={Background} strength={1500}>
         <AboutMe scrollRef={aboutMeRef}/>
         <Projects scrollRef={projectsRef}/>
         <Contacts scrollRef={contactsRef}/>
