@@ -13,6 +13,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
 import Avatar from './../assets/avatar.png';
+import { withWidth } from '@material-ui/core';
 
 
 
@@ -40,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
   title: {
     margin: 20,
     [theme.breakpoints.down("sm")]: {
-      textAlign: "center"
+      textAlign: "center",
+      margin: 0
     }
   },
   image: {
@@ -51,59 +53,74 @@ const useStyles = makeStyles((theme) => ({
 
 function Contacts(props){
   const classes = useStyles();
+  const isLargeDevice = (props.width !== "xs" && props.width !== "sm");
+
+  const interior = (
+    <React.Fragment>
+      <Grid container alignment="center">
+        <Grid item md={6} xs={12}>
+          <Typography className={classes.title} variant="h2">
+            Contacts
+          </Typography>
+          <List>
+            <ListSocialIcon
+              icon={MailIcon}
+              primary="E-mail"
+              secondary="pedro.perpetua@sapo.pt"
+              link="mailto:pedro.perpetua@sapo.pt"
+            />
+            <ListSocialIcon
+              icon={LinkedInIcon}
+              primary="LinkedIn"
+              secondary="Pedro Perpétua"
+              link="https://www.linkedin.com/in/pedro-perp%C3%A9tua-29a7b6211/"
+            />
+            <ListSocialIcon
+              icon={GitHubIcon}
+              primary="GitHub"
+              secondary="PedroPerpetua"
+              link="https://github.com/PedroPerpetua"
+            />
+            <ListSocialIcon
+              svg icon={DiscordIcon}
+              primary="Discord"
+              secondary="Pedro (WarriorPP)#8820"
+            />
+            <ListSocialIcon
+              icon={TwitterIcon}
+              primary="Twitter"
+              secondary="Pedro_WarriorPP"
+              link="https://twitter.com/Pedro_WarriorPP"
+            />
+            <ListSocialIcon
+              icon={InstagramIcon}
+              primary="Instagram"
+              secondary="perpetuapedro"
+              link="https://www.instagram.com/perpetuapedro/"
+            />
+          </List>
+        </Grid>
+        <Grid item md={6} xs={12}>
+          <img className={classes.image} src={Avatar} alt=""/>
+        </Grid>
+      </Grid>
+    </React.Fragment>
+  )
+
+  if(isLargeDevice)
+    return (
+      <div className={classes.base} ref={props.scrollRef}>
+        <Container>
+          {interior}
+        </Container>
+      </div>
+    );
+  // If it's a small device, don't wrap in a container
   return (
     <div className={classes.base} ref={props.scrollRef}>
-      <Container>
-        <Grid container alignment="center">
-          <Grid item md={6} xs={12}>
-            <Typography className={classes.title} variant="h2">
-              Contacts
-            </Typography>
-            <List>
-              <ListSocialIcon
-                icon={MailIcon}
-                primary="E-mail"
-                secondary="pedro.perpetua@sapo.pt"
-                link="mailto:pedro.perpetua@sapo.pt"
-              />
-              <ListSocialIcon
-                icon={LinkedInIcon}
-                primary="LinkedIn"
-                secondary="Pedro Perpétua"
-                link="https://www.linkedin.com/in/pedro-perp%C3%A9tua-29a7b6211/"
-              />
-              <ListSocialIcon
-                icon={GitHubIcon}
-                primary="GitHub"
-                secondary="PedroPerpetua"
-                link="https://github.com/PedroPerpetua"
-              />
-              <ListSocialIcon
-                svg icon={DiscordIcon}
-                primary="Discord"
-                secondary="Pedro (WarriorPP)#8820"
-              />
-              <ListSocialIcon
-                icon={TwitterIcon}
-                primary="Twitter"
-                secondary="Pedro_WarriorPP"
-                link="https://twitter.com/Pedro_WarriorPP"
-              />
-              <ListSocialIcon
-                icon={InstagramIcon}
-                primary="Instagram"
-                secondary="perpetuapedro"
-                link="https://www.instagram.com/perpetuapedro/"
-              />
-            </List>
-          </Grid>
-          <Grid item md={6} xs={12}>
-            <img className={classes.image} src={Avatar} alt=""/>
-          </Grid>
-        </Grid>
-      </Container>
+      {interior}
     </div>
   );
 }
 
-export default Contacts;
+export default withWidth()(Contacts);

@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
   title: {
     margin: 20,
     [theme.breakpoints.down("sm")]: {
-      textAlign: "center"
+      textAlign: "center",
+      margin: 0
     }
   }
 }));
