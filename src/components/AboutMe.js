@@ -10,7 +10,6 @@ import TooltippedSocialIcon from './TooltippedSocialIcon';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -88,11 +87,6 @@ function AboutMe(props){
             icon={TwitterIcon}
             text="Twitter"
             link="https://twitter.com/Pedro_WarriorPP"
-          />
-          <TooltippedSocialIcon
-            icon={InstagramIcon}
-            text="Instagram"
-            link="https://www.instagram.com/perpetuapedro/"
           />
         </Grid>
       </Grid>

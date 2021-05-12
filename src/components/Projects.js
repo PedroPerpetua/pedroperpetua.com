@@ -37,7 +37,7 @@ function Projects(props){
         image={PedroPerpetua}
         side="left"
       >
-        I developed this website using React, integrating Material-UI, served trough Github-Pages. It features a responsive design,
+        I developed this website using React, integrating Material-UI, and serving it trough Github-Pages. It features a responsive design,
         working well both on large, medium and small devices.<br/>
         Even though it is mostly/totally static, I have knowledge about what is and how to use State and Hooks.
       </ProjectCard>
@@ -57,11 +57,11 @@ function Projects(props){
         image={ProjetosUtil}
         side="left"
       >
-        ProjetosUtil is a tool specially designed for Civil Engineers to automate all the "office paperwork" regarding their projects. It
-        features a local Python Backend and an Electron Frontend that communicate with each other. It also features a small webserver that makes
-        use of Flask to manage version updating, bug reporting, and user requests. It is also packaged with pyinstaller and destributed using
-        Inno Setup.<br/><br/>
-
+        ProjetosUtil is a tool specially designed for Civil Engineers to automate their "office paperwork". It features a local Python Backend
+        and a Javascript (Electron) Frontend that communicate with each other. It also features a small webserver that makes use of Flask to
+        manage version updating, bug reporting, and user requests, featuring a fully fledged admin page. Packaged with Pyinstaller and destributed
+        using Inno Setup.<br/>
+        <br/>
         Notable libraries/frameworks used:<br/>
         <ul>
           <li>PythonEel</li>

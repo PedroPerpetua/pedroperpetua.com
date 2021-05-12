@@ -32,16 +32,16 @@ function ProjectCard(props){
   const isLargeDevice = (props.width !== "xs" && props.width !== "sm");
   let left = (
     <Grid item md={6} xs={12}>
-      <Typography variant="body1" className={classes.text}>
+      <Typography className={classes.text} component="div" variant="body1">
         {props.children}
       </Typography>
     </Grid>
-  )
+  );
   let right = (
     <Grid item md={6} xs={12}>
       <img className={classes.image} src={props.image} alt=""/>
     </Grid>
-  )
+  );
  if(props.side === "right" && isLargeDevice)
     // Swap them
     [left, right] = [right, left];
