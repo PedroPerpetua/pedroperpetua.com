@@ -21,8 +21,7 @@ function ListSocialIcon(props){
     Icon = React.createElement(NewSvgIcon, {icon: props.icon}, null);
   else
     Icon = React.createElement(props.icon);
-  console.log(Icon);
-  let extraProps = {}
+  let extraProps = {};
   if(props.link)
       extraProps = {
         button: true,
@@ -30,7 +29,7 @@ function ListSocialIcon(props){
         href: props.link,
         target: "_blank",
         rel: "noopener noreferrer"
-      }
+      };
   return (
     <ListItem {...extraProps}>
       <ListItemAvatar>
