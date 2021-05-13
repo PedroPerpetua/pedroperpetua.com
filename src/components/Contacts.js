@@ -13,8 +13,6 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
 import Avatar from './../assets/avatar.png';
-import { withWidth } from '@material-ui/core';
-
 
 
 // Prevent complicating things to load SVGs just for this one icon
@@ -53,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Contacts(props){
   const classes = useStyles();
-  const isLargeDevice = (props.width !== "xs" && props.width !== "sm");
 
   const interior = (
     <React.Fragment>
@@ -107,7 +104,7 @@ function Contacts(props){
     </React.Fragment>
   )
 
-  if(isLargeDevice)
+  if(props.isLargeDevice)
     return (
       <div className={classes.base} ref={props.scrollRef}>
         <Container>
@@ -123,4 +120,4 @@ function Contacts(props){
   );
 }
 
-export default withWidth()(Contacts);
+export default Contacts;

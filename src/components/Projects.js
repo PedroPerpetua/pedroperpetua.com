@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, withWidth } from '@material-ui/core/';
+import { makeStyles } from '@material-ui/core/';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
@@ -27,13 +27,13 @@ const useStyles = makeStyles((theme) => ({
 
 function Projects(props){
   const classes = useStyles();
-  const isLargeDevice = (props.width !== "xs" && props.width !== "sm");
 
   const interior = (
     <React.Fragment>
       <Typography className={classes.title} variant="h2">Projects</Typography>
 
       <ProjectCard
+        isLargeDevice={props.isLargeDevice}
         title="pedroperpetua.com"
         image={PedroPerpetua}
         side="left"
@@ -44,6 +44,7 @@ function Projects(props){
       </ProjectCard>
 
       <ProjectCard
+        isLargeDevice={props.isLargeDevice}
         title="papelmagico.eu"
         image={PapelMagico}
         side="right"
@@ -53,6 +54,7 @@ function Projects(props){
       </ProjectCard>
 
       <ProjectCard
+        isLargeDevice={props.isLargeDevice}
         title="ProjetosUtil"
         subtitle="Currently only available in Portuguese"
         image={ProjetosUtil}
@@ -77,7 +79,7 @@ function Projects(props){
     </React.Fragment>
   );
 
-  if(isLargeDevice)
+  if(props.isLargeDevice)
     return (
       <div className={classes.base} ref={props.scrollRef}>
         <Container>
@@ -93,4 +95,4 @@ function Projects(props){
   );
 }
 
-export default withWidth()(Projects);
+export default Projects;

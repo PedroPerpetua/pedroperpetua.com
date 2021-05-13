@@ -1,6 +1,7 @@
 import React from 'react'
 import '@fontsource/roboto';
 import './App.css';
+import { withWidth } from '@material-ui/core';
 import {Parallax} from 'react-parallax';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
@@ -9,7 +10,8 @@ import Contacts from './components/Contacts';
 import Background from './assets/background.png';
 
 
-function App() {
+function App(props) {
+  const isLargeDevice = (props.width !== "xs" && props.width !== "sm");
   const aboutMeRef = React.createRef();
   const scrollToAboutMe = (() =>{
     window.scrollTo({
@@ -34,17 +36,18 @@ function App() {
   return (
     <div className="App">
       <Header
+        isLargeDevice={isLargeDevice}
         scrollAboutMe={scrollToAboutMe}
         scrollProjects={scrollToProjects}
         scrollContacts={scrollToContacts}
       />
       <Parallax bgImage={Background} strength={1500}>
-        <AboutMe scrollRef={aboutMeRef}/>
-        <Projects scrollRef={projectsRef}/>
-        <Contacts scrollRef={contactsRef}/>
+        <AboutMe isLargeDevice={isLargeDevice} scrollRef={aboutMeRef}/>
+        <Projects isLargeDevice={isLargeDevice} scrollRef={projectsRef}/>
+        <Contacts isLargeDevice={isLargeDevice} scrollRef={contactsRef}/>
       </Parallax>
     </div>
   );
 }
 
-export default App;
+export default withWidth()(App);
