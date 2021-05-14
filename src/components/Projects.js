@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/';
-import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import MobileWrapper from './MobileWrapper';
 
 import ProjectCard from './ProjectCard';
 import PedroPerpetua from './../assets/pedroperpetua.jpg';
@@ -28,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
 function Projects(props){
   const classes = useStyles();
 
-  const interior = (
-    <React.Fragment>
-      <Typography className={classes.title} variant="h2">Projects</Typography>
+  return (
+    <MobileWrapper divClass={classes.base}>
+      <Typography className={classes.title} variant="h2" ref={props.scrollRef}>Projects</Typography>
 
       <ProjectCard
         isLargeDevice={props.isLargeDevice}
@@ -76,22 +76,7 @@ function Projects(props){
         </ul>
       </ProjectCard>
 
-    </React.Fragment>
-  );
-
-  if(props.isLargeDevice)
-    return (
-      <div className={classes.base} ref={props.scrollRef}>
-        <Container>
-          {interior}
-        </Container>
-      </div>
-    )
-  // If it's a small device, don't wrap in a container
-  return (
-    <div className={classes.base} ref={props.scrollRef}>
-      {interior}
-    </div>
+    </MobileWrapper>
   );
 }
 

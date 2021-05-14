@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
+import MobileWrapper from './MobileWrapper';
 
 import ListSocialIcon from './ListSocialIcon';
 import MailIcon from '@material-ui/icons/Mail';
@@ -52,71 +52,63 @@ const useStyles = makeStyles((theme) => ({
 function Contacts(props){
   const classes = useStyles();
 
-  const interior = (
-    <React.Fragment>
+  return (
+    <MobileWrapper divClass={classes.base}>
       <Grid container alignment="center">
         <Grid item md={6} xs={12}>
-          <Typography className={classes.title} variant="h2">
+          <Typography className={classes.title} variant="h2" ref={props.scrollRef}>
             Contacts
           </Typography>
           <List>
+
             <ListSocialIcon
               icon={MailIcon}
               primary="E-mail"
               secondary="pedro.perpetua@sapo.pt"
               link="mailto:pedro.perpetua@sapo.pt"
             />
+
             <ListSocialIcon
               icon={LinkedInIcon}
               primary="LinkedIn"
               secondary="Pedro Perpétua"
               link="https://www.linkedin.com/in/pedro-perp%C3%A9tua-29a7b6211/"
             />
+
             <ListSocialIcon
               icon={GitHubIcon}
               primary="GitHub"
               secondary="PedroPerpetua"
               link="https://github.com/PedroPerpetua"
             />
+
             <ListSocialIcon
               svg icon={DiscordIcon}
               primary="Discord"
               secondary="Pedro (WarriorPP)#8820"
             />
+
             <ListSocialIcon
               icon={TwitterIcon}
               primary="Twitter"
               secondary="Pedro_WarriorPP"
               link="https://twitter.com/Pedro_WarriorPP"
             />
+
             <ListSocialIcon
               icon={InstagramIcon}
               primary="Instagram"
               secondary="perpetuapedro"
               link="https://www.instagram.com/perpetuapedro/"
             />
+
           </List>
         </Grid>
         <Grid item md={6} xs={12}>
           <img className={classes.image} src={Avatar} alt=""/>
         </Grid>
       </Grid>
-    </React.Fragment>
-  )
-
-  if(props.isLargeDevice)
-    return (
-      <div className={classes.base} ref={props.scrollRef}>
-        <Container>
-          {interior}
-        </Container>
-      </div>
-    );
-  // If it's a small device, don't wrap in a container
-  return (
-    <div className={classes.base} ref={props.scrollRef}>
-      {interior}
-    </div>
+    </MobileWrapper>
   );
 }
 

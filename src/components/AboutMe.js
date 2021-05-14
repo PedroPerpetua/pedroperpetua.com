@@ -34,13 +34,12 @@ const useStyles = makeStyles((theme) => ({
 function AboutMe(props){
   const classes = useStyles();
   return (
-    <Container maxWidth="sm" className={classes.container}>
+    <Container className={classes.container} maxWidth="sm" ref={props.scrollRef}>
       <Grid
         container
         justify="center"
         align="center"
         spacing={2}
-        ref={props.scrollRef}
       >
         <Grid item>
           <Avatar
