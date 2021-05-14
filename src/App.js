@@ -4,6 +4,7 @@ import './App.css';
 import { withWidth } from '@material-ui/core';
 import {Parallax} from 'react-parallax';
 import Header from './components/Header';
+import MobileHeader from './components/MobileHeader';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contacts from './components/Contacts';
@@ -33,9 +34,11 @@ function App(props) {
     });
   });
 
+  const ChosenHeader = isLargeDevice ? Header:MobileHeader
+
   return (
     <div className="App">
-      <Header
+      <ChosenHeader
         isLargeDevice={isLargeDevice}
         scrollAboutMe={scrollToAboutMe}
         scrollProjects={scrollToProjects}
