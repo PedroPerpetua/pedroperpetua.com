@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, withWidth } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme)=> ({
 
 function ProjectCard(props){
   const classes = useStyles();
+  const isLargeDevice = (props.width !== "xs" && props.width !== "sm");
   let left = (
     <Grid item md={6} xs={12}>
       <Typography className={classes.text} component="div" variant="body1">
@@ -41,7 +42,7 @@ function ProjectCard(props){
       <img className={classes.image} src={props.image} alt=""/>
     </Grid>
   );
- if(props.side === "right" && props.isLargeDevice)
+ if(props.side === "right" && isLargeDevice)
     // Swap them
     [left, right] = [right, left];
 
@@ -49,12 +50,12 @@ function ProjectCard(props){
     <div className={classes.base}>
       <Typography
         variant="h4"
-        style={{textAlign: props.isLargeDevice ? props.side:"center"}}
+        style={{textAlign: isLargeDevice ? props.side:"center"}}
       >
         {props.title}
       </Typography>
       {props.subtitle &&
-      <Typography variant="subtitle1" style={{textAlign: props.isLargeDevice ? props.side:"center"}}>
+      <Typography variant="subtitle1" style={{textAlign: isLargeDevice ? props.side:"center"}}>
         <i>{props.subtitle}</i>
       </Typography>
       }
@@ -66,4 +67,4 @@ function ProjectCard(props){
   );
 }
 
-export default ProjectCard;
+export default withWidth()(ProjectCard);

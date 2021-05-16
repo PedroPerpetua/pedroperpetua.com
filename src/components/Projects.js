@@ -33,7 +33,6 @@ function Projects(props){
       <Typography className={classes.title} variant="h2" ref={props.scrollRef}>Projects</Typography>
 
       <ProjectCard
-        isLargeDevice={props.isLargeDevice}
         title="pedroperpetua.com"
         image={PedroPerpetua}
         side="left"
@@ -44,7 +43,6 @@ function Projects(props){
       </ProjectCard>
 
       <ProjectCard
-        isLargeDevice={props.isLargeDevice}
         title="papelmagico.eu"
         image={PapelMagico}
         side="right"
@@ -54,7 +52,6 @@ function Projects(props){
       </ProjectCard>
 
       <ProjectCard
-        isLargeDevice={props.isLargeDevice}
         title="ProjetosUtil"
         subtitle="Currently only available in Portuguese"
         image={ProjetosUtil}
