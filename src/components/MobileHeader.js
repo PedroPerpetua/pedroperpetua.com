@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
@@ -46,12 +46,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function MobileHeader(props){
+function MobileHeader({ scrollAboutMe, scrollProjects, scrollContacts }){
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-  const toggleDrawer = (newState) => () => {
-    setOpen(newState);
-  }
+  const [open, setOpen] = useState(false);
+
   const onLinkClick = (scrollFunction) => () => {
     setOpen(false);
     scrollFunction();
@@ -66,7 +64,7 @@ function MobileHeader(props){
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
-            onClick={toggleDrawer(true)}
+            onClick={() => setOpen(true)}
             >
               <MenuIcon fontSize="large"/>
           </IconButton>
@@ -78,35 +76,40 @@ function MobileHeader(props){
       <SwipeableDrawer
         anchor="left"
         open={open}
-        onClose={toggleDrawer(false)}
-        onOpen={toggleDrawer(true)}
+        onClose={() => setOpen(false)}
+        onOpen={() => setOpen(true)}
         classes={{ paper: classes.drawer }}
       >
         <div
           role="presentation"
-          onClick={toggleDrawer(false)}
-          onKeyDown={toggleDrawer(false)}
+          onClick={() => setOpen(false)}
+          onKeyDown={() => setOpen(false)}
         />
         <List>
+
           <DrawerLinkIcon
-            onClick={onLinkClick(props.scrollAboutMe)}
+            onClick={onLinkClick(scrollAboutMe)}
             icon={InfoIcon}
             text="About Me"
           />
+
           <DrawerLinkIcon
-            onClick={onLinkClick(props.scrollProjects)}
+            onClick={onLinkClick(scrollProjects)}
             icon={WorkIcon}
             text="Projects"
           />
+
           <DrawerLinkIcon
-            onClick={onLinkClick(props.scrollContacts)}
+            onClick={onLinkClick(scrollContacts)}
             icon={ForumIcon}
             text="Contacts"
           />
+
         </List>
       </SwipeableDrawer>
     </React.Fragment>
   );
 }
+
 
 export default MobileHeader;

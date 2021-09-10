@@ -26,7 +26,7 @@ const DiscordIcon = `M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.
 2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-\
 3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-\
 .6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-\
-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z`
+.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z`;
 
 
 const useStyles = makeStyles((theme) => ({
@@ -49,14 +49,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function Contacts(props){
+function Contacts({ scrollRef }){
   const classes = useStyles();
 
   return (
     <MobileWrapper divClass={classes.base}>
       <Grid container alignment="center">
         <Grid item md={6} xs={12}>
-          <Typography className={classes.title} variant="h2" ref={props.scrollRef}>
+          <Typography className={classes.title} variant="h2" ref={scrollRef}>
             Contacts
           </Typography>
           <List>
@@ -83,7 +83,7 @@ function Contacts(props){
             />
 
             <ListSocialIcon
-              svg icon={DiscordIcon}
+              isSvg icon={DiscordIcon}
               primary="Discord"
               secondary="Pedro (WarriorPP)#8820"
             />
@@ -111,5 +111,6 @@ function Contacts(props){
     </MobileWrapper>
   );
 }
+
 
 export default Contacts;

@@ -1,8 +1,8 @@
 import React from 'react'
-import '@fontsource/roboto';
 import './App.css';
+import '@fontsource/roboto';
 import { withWidth } from '@material-ui/core';
-import {Parallax} from 'react-parallax';
+import { Parallax } from 'react-parallax';
 import Header from './components/Header';
 import MobileHeader from './components/MobileHeader';
 import AboutMe from './components/AboutMe';
@@ -11,8 +11,9 @@ import Contacts from './components/Contacts';
 import Background from './assets/background.png';
 
 
-function App(props) {
-  const isLargeDevice = (props.width !== "xs" && props.width !== "sm");
+function App({ width }) {
+  const isLargeDevice = (width !== "xs" && width !== "sm");
+  const ChosenHeader = isLargeDevice ? Header : MobileHeader;
 
   const aboutMeRef = React.createRef();
   const projectsRef = React.createRef();
@@ -20,10 +21,8 @@ function App(props) {
   const scrollToRef = (ref) => () => {
     window.scrollTo({
       top: ref.current.offsetTop
-    })
+    });
   };
-
-  const ChosenHeader = isLargeDevice ? Header:MobileHeader
 
   return (
     <div className="App">
@@ -40,5 +39,6 @@ function App(props) {
     </div>
   );
 }
+
 
 export default withWidth()(App);

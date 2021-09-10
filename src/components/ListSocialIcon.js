@@ -6,43 +6,40 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
 
 
-function NewSvgIcon(props){
+function NewSvgIcon({ icon }){
   return (
     <SvgIcon>
-      <path d={props.icon} />
+      <path d={icon} />
     </SvgIcon>
   );
 }
 
 
-function ListSocialIcon(props){
-  let Icon;
-  if(props.svg)
-    Icon = React.createElement(NewSvgIcon, {icon: props.icon}, null);
-  else
-    Icon = React.createElement(props.icon);
-  let extraProps = {};
-  if(props.link)
-      extraProps = {
-        button: true,
-        component: "a",
-        href: props.link,
-        target: "_blank",
-        rel: "noopener noreferrer"
-      };
+function ListSocialIcon({ icon, isSvg, link, primary, secondary }){
+  const Icon = isSvg ? <NewSvgIcon icon={icon} /> : React.createElement(icon);
+
+  const linkProps = link ? {
+    button: true,
+    component: "a",
+    href: link,
+    target: "_blank",
+    rel: "noopener noreferrer"
+  } : {};
+
   return (
-    <ListItem {...extraProps}>
+    <ListItem {...linkProps}>
       <ListItemAvatar>
         <Avatar>
           {Icon}
         </Avatar>
       </ListItemAvatar>
       <ListItemText
-        primary={props.primary}
-        secondary={props.secondary}
+        primary={primary}
+        secondary={secondary}
       />
     </ListItem>
   );
 }
+
 
 export default ListSocialIcon;

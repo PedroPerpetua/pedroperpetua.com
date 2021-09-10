@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import PFP from './../assets/pfp.jpg';
-//import PFPAvatar from './../assets/pfp_avatar.png';
 
 import TooltippedSocialIcon from './TooltippedSocialIcon';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -31,16 +30,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function AboutMe(props){
+function AboutMe({ scrollRef }){
   const classes = useStyles();
+
   return (
-    <Container className={classes.container} maxWidth="sm" ref={props.scrollRef}>
-      <Grid
-        container
-        justify="center"
-        align="center"
-        spacing={2}
-      >
+    <Container className={classes.container} maxWidth="sm" ref={scrollRef}>
+      <Grid container justify="center" align="center" spacing={2}>
         <Grid item>
           <Avatar
             className={classes.avatar}
@@ -49,45 +44,45 @@ function AboutMe(props){
             imgProps={ {draggable: false} }
           />
         </Grid>
-        {/* <Grid item>
-          <Avatar
-            className={classes.avatar}
-            alt=""
-            src={PFPAvatar}
-            imgProps={ {draggable: false} }
-          />
-        </Grid> */}
         <Grid item>
+
           <Typography variant="h5" color="inherit">
             Student and Developer
           </Typography>
+
           <Typography variant="h2" color="inherit">
             Pedro Perpétua
           </Typography>
+
           <Typography className={classes.textBox} variant="h6" color="inherit">
             I'm a Computer Science student at Instituto Superior Técnico, Portugal.
             I love to program and explore GameDev as a hobby.
             I seek to work as a full-stack developer.
           </Typography>
+
           <TooltippedSocialIcon
             icon={GitHubIcon}
             text="GitHub"
             link="https://github.com/PedroPerpetua"
           />
+
           <TooltippedSocialIcon
             icon={LinkedInIcon}
             text="LinkedIn"
             link="https://www.linkedin.com/in/pedro-perp%C3%A9tua-29a7b6211/"
           />
+
           <TooltippedSocialIcon
             icon={TwitterIcon}
             text="Twitter"
             link="https://twitter.com/Pedro_WarriorPP"
           />
+
         </Grid>
       </Grid>
     </Container>
   );
 }
+
 
 export default AboutMe;

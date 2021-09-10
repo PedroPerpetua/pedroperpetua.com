@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function Header(props){
+function Header({ scrollAboutMe, scrollProjects, scrollContacts }){
   const classes = useStyles();
 
   return(
@@ -38,13 +38,13 @@ function Header(props){
             Pedro Perpétua
           </Typography>
           <nav>
-            <Link className={classes.link} variant="button" color="textPrimary" onClick={props.scrollAboutMe}>
+            <Link className={classes.link} variant="button" color="textPrimary" onClick={scrollAboutMe}>
               About me
             </Link>
-            <Link className={classes.link} variant="button" color="textPrimary" onClick={props.scrollProjects}>
+            <Link className={classes.link} variant="button" color="textPrimary" onClick={scrollProjects}>
               Projects
             </Link>
-            <Link className={classes.link} variant="button" color="textPrimary" onClick={props.scrollContacts}>
+            <Link className={classes.link} variant="button" color="textPrimary" onClick={scrollContacts}>
               Contacts
             </Link>
           </nav>
@@ -53,5 +53,6 @@ function Header(props){
     </React.Fragment>
   );
 }
+
 
 export default Header;

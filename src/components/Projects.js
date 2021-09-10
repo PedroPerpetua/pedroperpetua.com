@@ -25,12 +25,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function Projects(props){
+function Projects({ scrollRef }){
   const classes = useStyles();
 
   return (
     <MobileWrapper divClass={classes.base}>
-      <Typography className={classes.title} variant="h2" ref={props.scrollRef}>Projects</Typography>
+      <Typography className={classes.title} variant="h2" ref={scrollRef}>
+        Projects
+      </Typography>
 
       <ProjectCard
         title="pedroperpetua.com"
@@ -58,7 +60,7 @@ function Projects(props){
         side="left"
       >
         ProjetosUtil is a tool specially designed for Civil Engineers to automate their "office paperwork". It features a local Python Backend
-        and a Javascript (Electron) Frontend that communicate with each other. It also features a small webserver that makes use of Flask to
+        and a JavaScript (Electron) Frontend that communicate with each other. It also features a small webserver that makes use of Flask to
         manage version updating, bug reporting, and user requests, featuring a fully fledged admin page. Packaged with Pyinstaller and destributed
         using Inno Setup.<br/>
         <br/>

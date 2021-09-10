@@ -27,37 +27,37 @@ const useStyles = makeStyles((theme)=> ({
 }));
 
 
-function ProjectCard(props){
+function ProjectCard({ title, subtitle, image, side, children, width}){
   const classes = useStyles();
-  const isLargeDevice = (props.width !== "xs" && props.width !== "sm");
+  const isLargeDevice = (width !== "xs" && width !== "sm");
+  const textSide = isLargeDevice ? side : "center"
+
   let left = (
     <Grid item md={6} xs={12}>
       <Typography className={classes.text} component="div" variant="body1">
-        {props.children}
+        {children}
       </Typography>
     </Grid>
   );
   let right = (
     <Grid item md={6} xs={12}>
-      <img className={classes.image} src={props.image} alt=""/>
+      <img className={classes.image} src={image} alt=""/>
     </Grid>
   );
- if(props.side === "right" && isLargeDevice)
-    // Swap them
-    [left, right] = [right, left];
+
+  // Swap them if necessary
+ if(side === "right" && isLargeDevice) [left, right] = [right, left];
 
   return (
     <div className={classes.base}>
-      <Typography
-        variant="h4"
-        style={{textAlign: isLargeDevice ? props.side:"center"}}
-      >
-        {props.title}
+      <Typography variant="h4" style={{textAlign: textSide}}>
+        {title}
       </Typography>
-      {props.subtitle &&
-      <Typography variant="subtitle1" style={{textAlign: isLargeDevice ? props.side:"center"}}>
-        <i>{props.subtitle}</i>
-      </Typography>
+      {
+        subtitle &&
+        <Typography variant="subtitle1" style={{textAlign: textSide}}>
+          <i>{subtitle}</i>
+        </Typography>
       }
       <Grid container>
         {left}
@@ -66,5 +66,6 @@ function ProjectCard(props){
     </div>
   );
 }
+
 
 export default withWidth()(ProjectCard);

@@ -16,20 +16,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function DrawerLinkIcon(props){
+function DrawerLinkIcon({ onClick, icon, text}){
   const classes = useStyles();
-  const Icon = props.icon;
+  const Icon = icon;
+
   return (
-    <ListItem button onClick={props.onClick}>
+    <ListItem button onClick={onClick}>
       <ListItemIcon>
         <Icon fontSize="large" className={classes.icon}/>
       </ListItemIcon>
       <ListItemText
-        primary={props.text}
+        primary={text}
         classes={ {primary: classes.text} }
       />
     </ListItem>
   );
 }
+
 
 export default DrawerLinkIcon;

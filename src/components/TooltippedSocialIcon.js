@@ -13,16 +13,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function TooltippedSocialIcon(props){
+function TooltippedSocialIcon({ icon, text, link }){
   const classes = useStyles();
-  const Icon = props.icon;
+  const Icon = icon;
   return(
     <Tooltip
       classes={ {tooltip: classes.tooltip} }
-      title={props.text}
+      title={text}
     >
       <IconButton
-        href={props.link}
+        href={link}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -31,5 +31,6 @@ function TooltippedSocialIcon(props){
     </Tooltip>
   );
 }
+
 
 export default TooltippedSocialIcon;
