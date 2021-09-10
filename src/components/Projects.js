@@ -73,7 +73,7 @@ function Projects({ scrollRef }){
         side="left"
       >
         The athens project was a project I developed while working as an intern at Tetrapi Creative Solutions. It was a proof of concept exclusively
-        developed by me for a secure digital vote platform, making use of blockchain technology. It contained four distinc services:
+        developed by me for a secure digital vote platform, making use of blockchain technology. It contained four distinct services:
         <ul>
           <li>
             Backoffice<br/>
