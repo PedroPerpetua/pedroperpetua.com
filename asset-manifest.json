@@ -1,31 +1,31 @@
 {
   "files": {
     "main.css": "/static/css/main.9c6376ac.chunk.css",
-    "main.js": "/static/js/main.35ed94bf.chunk.js",
-    "main.js.map": "/static/js/main.35ed94bf.chunk.js.map",
+    "main.js": "/static/js/main.e77e55f7.chunk.js",
+    "main.js.map": "/static/js/main.e77e55f7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.56a8dca1.js",
     "runtime-main.js.map": "/static/js/runtime-main.56a8dca1.js.map",
     "static/css/2.8c49bb0a.chunk.css": "/static/css/2.8c49bb0a.chunk.css",
-    "static/js/2.1e150a75.chunk.js": "/static/js/2.1e150a75.chunk.js",
-    "static/js/2.1e150a75.chunk.js.map": "/static/js/2.1e150a75.chunk.js.map",
+    "static/js/2.806fd262.chunk.js": "/static/js/2.806fd262.chunk.js",
+    "static/js/2.806fd262.chunk.js.map": "/static/js/2.806fd262.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.8c49bb0a.chunk.css.map": "/static/css/2.8c49bb0a.chunk.css.map",
     "static/css/main.9c6376ac.chunk.css.map": "/static/css/main.9c6376ac.chunk.css.map",
-    "static/js/2.1e150a75.chunk.js.LICENSE.txt": "/static/js/2.1e150a75.chunk.js.LICENSE.txt",
+    "static/js/2.806fd262.chunk.js.LICENSE.txt": "/static/js/2.806fd262.chunk.js.LICENSE.txt",
     "static/media/avatar.dd82c412.png": "/static/media/avatar.dd82c412.png",
-    "static/media/background.73bc2998.png": "/static/media/background.73bc2998.png",
+    "static/media/background.58171df6.png": "/static/media/background.58171df6.png",
     "static/media/papelmagico.0bcede63.jpg": "/static/media/papelmagico.0bcede63.jpg",
-    "static/media/pedroperpetua.81b71ff1.jpg": "/static/media/pedroperpetua.81b71ff1.jpg",
-    "static/media/pfp.6d2a026d.jpg": "/static/media/pfp.6d2a026d.jpg",
-    "static/media/projectathens.a973b2e1.jpg": "/static/media/projectathens.a973b2e1.jpg",
+    "static/media/pedroperpetua.d3d50a64.jpg": "/static/media/pedroperpetua.d3d50a64.jpg",
+    "static/media/pfp.db05f1c7.jpg": "/static/media/pfp.db05f1c7.jpg",
+    "static/media/projectathens.fd306306.jpg": "/static/media/projectathens.fd306306.jpg",
     "static/media/projetosutil.3fefc6ee.jpg": "/static/media/projetosutil.3fefc6ee.jpg",
     "static/media/index.css": "/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.56a8dca1.js",
     "static/css/2.8c49bb0a.chunk.css",
-    "static/js/2.1e150a75.chunk.js",
+    "static/js/2.806fd262.chunk.js",
     "static/css/main.9c6376ac.chunk.css",
-    "static/js/main.35ed94bf.chunk.js"
+    "static/js/main.e77e55f7.chunk.js"
   ]
 }
