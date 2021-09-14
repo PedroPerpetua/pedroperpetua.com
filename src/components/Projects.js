@@ -1,4 +1,5 @@
 import React from 'react';
+import Theme from './Theme';
 import { makeStyles } from '@material-ui/core/';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
@@ -12,7 +13,7 @@ import ProjectAthens from './../assets/projectathens.jpg';
 
 const useStyles = makeStyles((theme) => ({
   base: {
-    backgroundColor: "WhiteSmoke",
+    backgroundColor: Theme.palette.other.paper,
     padding: 50
   },
   title: {
@@ -35,19 +36,10 @@ function Projects({ scrollRef }){
       </Typography>
 
       <ProjectCard
-        title="pedroperpetua.com"
-        image={PedroPerpetua}
-        side="left"
-      >
-        I developed this website using React, integrating Material-UI, and serving it trough Github-Pages. It features a responsive design,
-        working well both on large, medium and small devices.
-      </ProjectCard>
-
-      <ProjectCard
         title="ProjetosUtil"
         subtitle="Currently only available in Portuguese"
         image={ProjetosUtil}
-        side="right"
+        side="left"
       >
         <Link href="https://projetosutil.pedroperpetua.com/" target="_blank" rel="noopener noreferrer">Website</Link>.
         ProjetosUtil is a tool specially designed for Civil Engineers to automate their "office paperwork". It features a local Python Backend
@@ -70,7 +62,7 @@ function Projects({ scrollRef }){
         title="Athens Project"
         subtitle="Internship @ Tetrapi Creative Solutions"
         image={ProjectAthens}
-        side="left"
+        side="right"
       >
         The athens project was a project exclusively developed by me while working as an intern at Tetrapi Creative Solutions. It was
         a proof of concept for a secure digital vote platform, making use of blockchain technology. It contained four distinct services:
@@ -87,7 +79,7 @@ function Projects({ scrollRef }){
           </li>
           <li>
             Desktop<br/>
-            A frontend service using React and Material-Ui designed to be the frontend for managing elections. A fully fledged website with login/signup,
+            A frontend service using React and Material-UI designed to be the user interface for managing elections. A fully fledged website with login/signup,
             account settings, fetching information from the Backoffice, making requests, error handling, and everything that would be expected for managing
             elections, candidates, election's results, etc. This service was also dockerized.
           </li>
@@ -101,6 +93,15 @@ function Projects({ scrollRef }){
         stop elections early, have a real-time updated view of events, and many other features.<br/>
         The project was fully organized featuring extensive documentation, dockerization options, global and easy to change configurations, and a makefile
         to tie it all together.
+      </ProjectCard>
+
+      <ProjectCard
+        title="pedroperpetua.com"
+        image={PedroPerpetua}
+        side="left"
+      >
+        I developed this website using React, integrating Material-UI, and serving it trough Github-Pages. It features a responsive design,
+        working well both on large, medium and small devices.
       </ProjectCard>
 
       <ProjectCard

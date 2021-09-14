@@ -1,3 +1,5 @@
+import React from 'react';
+import Theme from './Theme';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
@@ -15,13 +17,13 @@ const useStyles = makeStyles((theme) => ({
   container: {
     marginTop: 100,
     marginBottom: 105,
-    color: "white"
+    color: Theme.palette.text.secondary
   },
   avatar: {
     width: theme.spacing(20),
     height: theme.spacing(20),
     marginTop: 20,
-    backgroundColor: "#222222"
+    backgroundColor: Theme.palette.secondary.main
   },
   textBox: {
     textAlign: "justify",
@@ -35,7 +37,7 @@ function AboutMe({ scrollRef }){
 
   return (
     <Container className={classes.container} maxWidth="sm" ref={scrollRef}>
-      <Grid container justify="center" align="center" spacing={2}>
+      <Grid container justifyContent="center" align="center" spacing={2}>
         <Grid item>
           <Avatar
             className={classes.avatar}

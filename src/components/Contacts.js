@@ -1,4 +1,5 @@
 import React from 'react';
+import Theme from './Theme';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -31,7 +32,7 @@ const DiscordIcon = `M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.
 
 const useStyles = makeStyles((theme) => ({
   base: {
-    backgroundColor: "WhiteSmoke",
+    backgroundColor: Theme.palette.other.paper,
     padding: 50,
     marginTop: 100,
     marginBottom: 100

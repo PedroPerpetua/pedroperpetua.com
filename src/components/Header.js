@@ -1,4 +1,5 @@
 import React from 'react';
+import Theme from './Theme';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
@@ -10,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
     color: "white",
-    backgroundColor: "#222222"
+    backgroundColor: Theme.palette.secondary.main
   },
   toolbar: {
     flexWrap: 'wrap'
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   link: {
     margin: theme.spacing(1, 1.5),
     cursor: "pointer",
-    color: "white"
+    color: Theme.palette.text.secondary
   }
 }));
 

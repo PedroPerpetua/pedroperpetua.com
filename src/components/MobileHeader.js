@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Theme from './Theme';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
     color: "white",
-    backgroundColor: "#222222"
+    backgroundColor: Theme.palette.secondary.main
   },
   toolbar: {
     flexWrap: 'wrap'
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawer: {
     color: "white",
-    backgroundColor: "#222222",
+    backgroundColor: Theme.palette.secondary.main,
     width: "60%",
     minWidth: 180,
     maxWidth: 260
