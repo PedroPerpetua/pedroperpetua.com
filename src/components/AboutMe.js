@@ -71,7 +71,7 @@ function AboutMe({ scrollRef }){
           <TooltippedSocialIcon
             icon={LinkedInIcon}
             text="LinkedIn"
-            link="https://www.linkedin.com/in/pedro-perp%C3%A9tua-29a7b6211/"
+            link="https://www.linkedin.com/in/pedro-perpetua/"
           />
 
           <TooltippedSocialIcon
