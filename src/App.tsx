@@ -1,5 +1,9 @@
+import AppBar from './components/AppBar';
+
 function App() {
-  return ("Hello world!");
+  return (
+    <AppBar />
+  );
 }
 
 export default App
