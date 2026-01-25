@@ -914,6 +914,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stylistic/eslint-plugin@npm:5.7.1":
+  version: 5.7.1
+  resolution: "@stylistic/eslint-plugin@npm:5.7.1"
+  dependencies:
+    "@eslint-community/eslint-utils": "npm:^4.9.1"
+    "@typescript-eslint/types": "npm:^8.53.1"
+    eslint-visitor-keys: "npm:^4.2.1"
+    espree: "npm:^10.4.0"
+    estraverse: "npm:^5.3.0"
+    picomatch: "npm:^4.0.3"
+  peerDependencies:
+    eslint: ">=9.0.0"
+  checksum: 10c0/0f3b00162dbf3ae594b86ed468322e1e49ea8b2de1cdb95f589954457d26020ebde007da451e53c85e95108fc1d1461e0c7c355c39c7c124f71cc468dbe69104
+  languageName: node
+  linkType: hard
+
 "@tybys/wasm-util@npm:^0.10.1":
   version: 0.10.1
   resolution: "@tybys/wasm-util@npm:0.10.1"
@@ -1649,7 +1665,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"estraverse@npm:^5.1.0, estraverse@npm:^5.2.0":
+"estraverse@npm:^5.1.0, estraverse@npm:^5.2.0, estraverse@npm:^5.3.0":
   version: 5.3.0
   resolution: "estraverse@npm:5.3.0"
   checksum: 10c0/1ff9447b96263dec95d6d67431c5e0771eb9776427421260a3e2f0fdd5d6bd4f8e37a7338f5ad2880c9f143450c9b1e4fc2069060724570a49cf9cf0312bd107
@@ -2538,6 +2554,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pedroperpetua.com@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "pedroperpetua.com@workspace:."
+  dependencies:
+    "@emotion/react": "npm:11.14.0"
+    "@emotion/styled": "npm:11.14.1"
+    "@eslint/js": "npm:9.39.2"
+    "@fontsource/roboto": "npm:5.2.9"
+    "@mui/icons-material": "npm:7.3.7"
+    "@mui/material": "npm:7.3.7"
+    "@stylistic/eslint-plugin": "npm:5.7.1"
+    "@types/node": "npm:25.0.10"
+    "@types/react": "npm:19.2.9"
+    "@types/react-dom": "npm:19.2.3"
+    "@vitejs/plugin-react": "npm:5.1.2"
+    babel-plugin-react-compiler: "npm:1.0.0"
+    eslint: "npm:9.39.2"
+    eslint-plugin-react-hooks: "npm:7.0.1"
+    eslint-plugin-react-refresh: "npm:0.4.26"
+    globals: "npm:17.1.0"
+    react: "npm:19.2.3"
+    react-dom: "npm:19.2.3"
+    typescript: "npm:5.9.3"
+    typescript-eslint: "npm:8.53.1"
+    vite: "npm:rolldown-vite@7.2.5"
+  languageName: unknown
+  linkType: soft
+
 "picocolors@npm:^1.1.1":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
@@ -3069,33 +3113,6 @@ __metadata:
   checksum: 10c0/02b370d57fdf03ff7474e2e3b804c9fe6e6d1113aaae93f511349822ac5fb61b426c1e4bcd2fbc3ab880dc55a9795f2fa41f88b18a4c9e8fb400ed24732e518d
   languageName: node
   linkType: hard
-
-"website@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "website@workspace:."
-  dependencies:
-    "@emotion/react": "npm:11.14.0"
-    "@emotion/styled": "npm:11.14.1"
-    "@eslint/js": "npm:9.39.2"
-    "@fontsource/roboto": "npm:5.2.9"
-    "@mui/icons-material": "npm:7.3.7"
-    "@mui/material": "npm:7.3.7"
-    "@types/node": "npm:25.0.10"
-    "@types/react": "npm:19.2.9"
-    "@types/react-dom": "npm:19.2.3"
-    "@vitejs/plugin-react": "npm:5.1.2"
-    babel-plugin-react-compiler: "npm:1.0.0"
-    eslint: "npm:9.39.2"
-    eslint-plugin-react-hooks: "npm:7.0.1"
-    eslint-plugin-react-refresh: "npm:0.4.26"
-    globals: "npm:17.1.0"
-    react: "npm:19.2.3"
-    react-dom: "npm:19.2.3"
-    typescript: "npm:5.9.3"
-    typescript-eslint: "npm:8.53.1"
-    vite: "npm:rolldown-vite@7.2.5"
-  languageName: unknown
-  linkType: soft
 
 "which@npm:^2.0.1":
   version: 2.0.2
