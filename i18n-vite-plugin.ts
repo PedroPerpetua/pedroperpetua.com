@@ -73,6 +73,14 @@ function i18nVitePlugin(opts?: i18nVitePluginOptions): Plugin {
         if (globs.some(g => minimatch(relativePath, g))) schedule();
       });
     },
+    handleHotUpdate({ file, server }) {
+      if (file.includes('locales') && file.endsWith('.json')) {
+        server.ws.send({
+          type: 'custom',
+          event: 'locales-updated',
+        });
+      }
+    },
   };
 }
 

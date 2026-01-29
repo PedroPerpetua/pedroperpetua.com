@@ -27,4 +27,12 @@ i18next
     },
   });
 
+// Setup hot reload
+if (import.meta.hot) {
+  import.meta.hot.on('locales-updated', async () => {
+    await i18next.reloadResources();
+    await i18next.changeLanguage(i18next.language);
+  });
+}
+
 export default i18next;
