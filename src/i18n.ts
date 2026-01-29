@@ -5,6 +5,12 @@ import HttpBackend from 'i18next-http-backend';
 
 export const defaultNS = 'common';
 
+export type AvailableLanguage = 'en' | 'pt';
+export const availableLanguages: AvailableLanguage[] = [
+  'en',
+  'pt',
+];
+
 i18next
   .use(initReactI18next)
   .use(HttpBackend)

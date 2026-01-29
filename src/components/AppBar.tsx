@@ -1,4 +1,5 @@
 import { AppBar as MUIAppBar, Toolbar, Typography } from '@mui/material';
+import LanguageSwitcher from './LanguageSwitcher';
 
 function AppBar() {
   return (
@@ -7,6 +8,7 @@ function AppBar() {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Pedro Perpétua
         </Typography>
+        <LanguageSwitcher />
       </Toolbar>
     </MUIAppBar>
   );
