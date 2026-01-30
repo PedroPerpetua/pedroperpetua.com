@@ -62,16 +62,20 @@ function i18nVitePlugin(opts?: i18nVitePluginOptions): Plugin {
       server.watcher.add(config.extract.input);
       // Run on start
       server.watcher.on('ready', () => schedule());
-      // Run on file changes
-      server.watcher.on('change', async (file) => {
-        const relativePath = relative(process.cwd(), file);
-        // Make sure we don't execute on the type outputs
-        const outputs = [config.types?.output, config.types?.resourcesFile]
-          .filter(v => v !== undefined);
-        if (outputs.some(g => minimatch(relativePath, g))) return;
-        // Run if we match any of the other inputs
-        if (globs.some(g => minimatch(relativePath, g))) schedule();
-      });
+    },
+    transform(_, id) {
+      /*
+      Run this on transform so that we know there were no compilation errors; if a file with
+      translations fails to compile we don't run so we don't accidentally delete all the keys that
+      file contained.
+      */
+      const relativePath = relative(process.cwd(), id);
+      // Make sure we don't execute on the type outputs
+      const outputs = [config.types?.output, config.types?.resourcesFile]
+        .filter(v => v !== undefined);
+      if (outputs.some(g => minimatch(relativePath, g))) return;
+      // Run if we match any of the other inputs
+      if (globs.some(g => minimatch(relativePath, g))) schedule();
     },
     handleHotUpdate({ file, server }) {
       if (file.includes('locales') && file.endsWith('.json')) {
