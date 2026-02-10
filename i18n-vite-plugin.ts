@@ -35,7 +35,7 @@ const typesGeneratorLogger = { ...extractorLogger, info: () => { /* Disable this
 /* --- */
 
 type i18nVitePluginOptions = {
-  debounceMs?: number
+  debounceMs?: number,
 };
 
 function i18nVitePlugin(opts?: i18nVitePluginOptions): Plugin {

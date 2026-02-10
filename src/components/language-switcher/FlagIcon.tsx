@@ -9,9 +9,7 @@ const flagMap: Record<AvailableLanguage, FlagComponentType> = {
   pt: PT,
 };
 
-type FlagIconProps = {
-  lngCode: string
-} & SvgIconProps;
+export type FlagIconProps = { lngCode: string } & SvgIconProps;
 
 function FlagIcon({ lngCode, sx, ...props }: FlagIconProps) {
   const FlagComponent = flagMap[lngCode as AvailableLanguage];

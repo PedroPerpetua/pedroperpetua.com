@@ -3,8 +3,8 @@ import { Button, Menu, MenuItem, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import FlagIcon from './FlagIcon';
-import { availableLanguages } from '../i18n';
-import { languageNameFromCode } from '../utils/i18n';
+import { availableLanguages } from '../../i18n';
+import { languageNameFromCode } from './utils';
 
 function LanguageSelector() {
   const { i18n } = useTranslation();
@@ -15,7 +15,7 @@ function LanguageSelector() {
   return (
     <>
       <Button variant="outlined" onClick={e => setAnchorEl(e.currentTarget)} sx={{ minWidth: 'unset', px: 1 }}>
-        {flagEl}
+        { flagEl }
       </Button>
       <Menu
         open={Boolean(anchorEl)}
