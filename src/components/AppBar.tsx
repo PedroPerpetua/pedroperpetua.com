@@ -1,5 +1,5 @@
 import { AppBar as MUIAppBar, Toolbar, Typography } from '@mui/material';
-import LanguageSwitcher from './LanguageSwitcher';
+import LanguageSwitcher from './language-switcher';
 
 function AppBar() {
   return (
