@@ -13,6 +13,13 @@ const theme = createTheme({
       dark: '#000',
     },
   },
+  mixins: {
+    flexCenter: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
 });
 
 export default theme;
