@@ -11,7 +11,7 @@ function ExperienceContent({ title, subtitle, active, children }: ExperienceCont
   if (!active) return null;
   return (
     <Stack>
-      <Typography variant="h3">
+      <Typography variant="h4">
         { title }
       </Typography>
       {

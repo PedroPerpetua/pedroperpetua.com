@@ -1,4 +1,66 @@
 {
+  "experience": {
+    "perguntasQbPartTime": {
+      "content": {
+        "body": "",
+        "subtitle": "",
+        "title": ""
+      },
+      "timeline": {
+        "period": "",
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "qubItInternship": {
+      "content": {
+        "body": "",
+        "subtitle": "",
+        "title": ""
+      },
+      "timeline": {
+        "period": "",
+        "subTitle": "",
+        "title": ""
+      }
+    },
+    "tetrapiInternship": {
+      "content": {
+        "body": "",
+        "subtitle": "",
+        "title": ""
+      },
+      "timeline": {
+        "period": "",
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "tetrapiJob": {
+      "content": {
+        "body": "",
+        "subtitle": "",
+        "title": ""
+      },
+      "timeline": {
+        "period": "",
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "university": {
+      "content": {
+        "body": "",
+        "subtitle": "",
+        "title": ""
+      },
+      "timeline": {
+        "period": "",
+        "subtitle": "",
+        "title": ""
+      }
+    }
+  },
   "hero": {
     "subtitle": "Olá! Sou o Pedro",
     "title": "Programador Fullstack"

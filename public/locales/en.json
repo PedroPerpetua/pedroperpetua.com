@@ -1,4 +1,66 @@
 {
+  "experience": {
+    "perguntasQbPartTime": {
+      "content": {
+        "body": "<TODO />",
+        "subtitle": "Jan 2024 - Jul 2025",
+        "title": "React Native development"
+      },
+      "timeline": {
+        "period": "2024",
+        "subtitle": "PerguntasQB - Part-time",
+        "title": "Mobile App Developer"
+      }
+    },
+    "qubItInternship": {
+      "content": {
+        "body": "<TODO />",
+        "subtitle": "Feb 2022 - Jul 2022",
+        "title": "Microservice development in Java"
+      },
+      "timeline": {
+        "period": "2022",
+        "subTitle": "qubIt - Part-time",
+        "title": "Microservice development"
+      }
+    },
+    "tetrapiInternship": {
+      "content": {
+        "body": "<TODO />",
+        "subtitle": "Jul 2021 - Set 2021",
+        "title": "Athens Project - Blockchain voting system"
+      },
+      "timeline": {
+        "period": "2021",
+        "subtitle": "Tetrapi Creative Solutions - Summer Internship",
+        "title": "Prototype development"
+      }
+    },
+    "tetrapiJob": {
+      "content": {
+        "body": "<TODO />",
+        "subtitle": "September 2022 - Present",
+        "title": "Fullstack developer & Project manager"
+      },
+      "timeline": {
+        "period": "2022",
+        "subtitle": "Tetrapi Creative Solutions",
+        "title": "Fullstack developer & Project manager"
+      }
+    },
+    "university": {
+      "content": {
+        "body": "<TODO />",
+        "subtitle": "2018 - 2022",
+        "title": "Degree in Computer Science and Engineering"
+      },
+      "timeline": {
+        "period": "2022",
+        "subtitle": "Instituto Superior Técnico",
+        "title": "Computer Science and Engineering Degree"
+      }
+    }
+  },
   "hero": {
     "subtitle": "Fullstack Developer",
     "title": "Hi! I'm Pedro"
